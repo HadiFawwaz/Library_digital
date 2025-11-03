@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# BiblioCore — School Library Management
-=======
 # BiblioCore — School Simple E-book
->>>>>>> 9fe1208b0c9a12fce021d7b4d16fe261627e766e
 
 
 ## Fitur Utama
