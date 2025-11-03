@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="pageDescription">
-        Statistik singkat dan aktivitas peminjaman terbaru di Bibliotech.
+        Statistik singkat dan aktivitas peminjaman terbaru di BiblioCore.
     </x-slot>
 
     <div class="w-max-full text-center gap-6 md:grid-cols-2 xl:grid-cols-4">

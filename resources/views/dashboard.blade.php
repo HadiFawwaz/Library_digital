@@ -4,14 +4,14 @@
     </x-slot>
 
     <x-slot name="pageDescription">
-        Ringkasan aktivitas akun dan akses cepat menuju fitur utama Bibliotech.
+        Ringkasan aktivitas akun dan akses cepat menuju fitur utama BiblioCore.
     </x-slot>
 
     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         <div class="rounded-[2rem] border border-[#dcd2bd] bg-white/85 p-6 shadow-sm">
             <h3 class="text-lg font-semibold text-[#172a37]" style="font-family: 'Space Grotesk', sans-serif;">Status Masuk</h3>
             <p class="mt-3 text-sm text-[#4c5b54]">
-                {{ __("Selamat datang kembali! Kamu berhasil masuk ke Bibliotech.") }}
+                {{ __("Selamat datang kembali! Kamu berhasil masuk ke BiblioCore.") }}
             </p>
         </div>
         <div class="rounded-[2rem] border border-[#0f766e]/40 bg-[#0f766e]/10 p-6 text-[#115e59] shadow-sm">

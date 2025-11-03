@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $book->title }} | Bibliotech</title>
+    <title>{{ $book->title }} | BiblioCore</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -31,7 +31,7 @@
                     class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#115e59] text-lg font-semibold text-white shadow-sm">B</span>
                 <div>
                     <p class="text-lg font-semibold tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
-                        Bibliotech</p>
+                        BiblioCore</p>
                     <p class="text-xs uppercase tracking-[0.35em] text-[#5f6b63]">School Library</p>
                 </div>
             </a>
@@ -100,8 +100,8 @@
                                 @if (auth()->user()->isStudent())
                                     <a href="{{ route('student.books.show', $book) }}"
                                         class="inline-flex w-full items-center justify-center gap-2 rounded-[1.75rem] bg-[#0f766e] px-5 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-[#115e59]">
-                                        <span class="material-symbols-rounded text-base">library_add</span>
-                                        Pinjam Buku
+                                        <span class="material-symbols-rounded text-base">book</span>
+                                        Mulai Membaca
                                     </a>
                                 @else
                                     <a href="{{ route('admin.books.edit', $book) }}"
@@ -200,7 +200,7 @@
     <footer class="border-t border-[#e0d9c8] bg-white/80 py-6">
         <div
             class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-3 px-6 text-xs text-[#4c5b54] md:flex-row">
-            <p>&copy; {{ now()->year }} Bibliotech.</p>
+            <p>&copy; {{ now()->year }} BiblioCore.</p>
             <p class="flex items-center gap-2">
                 <span class="material-symbols-rounded text-sm text-[#0f766e]">code</span>
                 Laravel 12 • TailwindCSS • Breeze

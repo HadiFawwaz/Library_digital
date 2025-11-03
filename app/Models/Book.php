@@ -33,6 +33,11 @@ class Book extends Model
         return $this->hasMany(Borrowing::class);
     }
 
+    public function comments()
+{
+    return $this->hasMany(BookComment::class)->latest(); // supaya komentar terbaru muncul di atas
+}
+
     /**
      * Use the slug column for route model binding.
      */

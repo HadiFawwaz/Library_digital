@@ -39,11 +39,26 @@ class BookController extends Controller
         return view('student.books.index', compact('books', 'categories', 'search', 'category'));
     }
 
+    public function comment(Request $request, Book $book)
+{
+    $request->validate([
+        'comment' => 'required|string|max:1000',
+    ]);
+
+    $book->comments()->create([
+        'user_id' => auth()->id(),
+        'content' => $request->comment,
+    ]);
+
+    return redirect()->back()->with('success', 'Komentar berhasil ditambahkan!');
+}
+
     /**
      * Display a single book detail with borrow form.
      */
     public function show(Book $book): View
     {
-        return view('student.books.show', compact('book'));
+            $book->load('comments.user'); // Load komentar beserta user
+             return view('student.books.show', compact('book'));
     }
 }

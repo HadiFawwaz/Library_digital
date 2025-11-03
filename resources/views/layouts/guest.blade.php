@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $title ?? 'Masuk | Bibliotech' }}</title>
+    <title>{{ $title ?? 'Masuk | BiblioCore' }}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
                 <div class="space-y-6">
                     <span class="inline-flex items-center gap-2 rounded-full border border-[#f4bb7a] bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#b95d23]">
                         <span class="material-symbols-rounded text-sm">auto_stories</span>
-                        Bibliotech
+                        BiblioCore
                     </span>
                     <h1 class="text-4xl font-semibold leading-tight text-[#172a37]" style="font-family: 'Space Grotesk', sans-serif;">
                         Sistem perpustakaan sekolah yang dirancang ulang untuk kolaborasi dan kurasi.
@@ -65,7 +65,7 @@
                     <div>
                         <p class="text-xs font-semibold uppercase tracking-[0.35em] text-[#6b766f]">Portal aman</p>
                         <h2 class="text-xl font-semibold text-[#172a37]" style="font-family: 'Space Grotesk', sans-serif;">
-                            Masuk ke Bibliotech
+                            Masuk ke BiblioCore
                         </h2>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                 </div>
 
                 <p class="pt-6 text-center text-xs text-[#9aa29a]">
-                    &copy; {{ now()->year }} Bibliotech • Sistem Peminjaman Buku berbasis Digital
+                    &copy; {{ now()->year }} BiblioCore • Sistem Peminjaman Buku berbasis Digital
                 </p>
             </div>
         </div>

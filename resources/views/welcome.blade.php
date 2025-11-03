@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bibliotech | Perpustakaan Sekolah yang Terhubung</title>
+    <title>BiblioCore | Perpustakaan Sekolah yang Terhubung</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -36,7 +36,7 @@
                 <div class="group inline-block transition-all duration-300 hover:scale-105">
                     <p class="text-lg font-semibold tracking-tight transition-colors duration-300 group-hover:text-[#f97316]"
                         style="font-family: 'Space Grotesk', sans-serif;">
-                        Bibliotech
+                        BiblioCore
                     </p>
                     <p
                         class="text-xs uppercase tracking-[0.35em] text-[#5f6b63] transition-colors duration-300 group-hover:text-[#f97316]">
@@ -97,7 +97,7 @@
                                 Temukan, pantau, dan kurasi koleksi buku sekolah dengan tampilan yang lebih hangat.
                             </h1>
                             <p class="max-w-xl text-base leading-relaxed text-[#425051]">
-                                Bibliotech menghadirkan pengalaman perpustakaan sekolah yang terasa personal. Koleksi
+                                BiblioCore menghadirkan pengalaman perpustakaan sekolah yang terasa personal. Koleksi
                                 dikurasi, data stok real-time, dan proses peminjaman yang cair untuk admin maupun siswa.
                             </p>
                         </div>
@@ -208,7 +208,7 @@
                 <div class="max-w-3xl">
 
                     <h2 class="text-3xl font-semibold text-[#172a37]" style="font-family: 'Space Grotesk', sans-serif;">
-                        Katalog publik Bibliotech menampilkan buku dengan informasi stok dan kategori secara langsung.
+                        Katalog publik BiblioCore menampilkan buku dengan informasi stok dan kategori secara langsung.
                     </h2>
                     <p class="mt-4 text-sm leading-relaxed text-[#4c5b54]">
                         Kami menggabungkan workflow administrasi dengan sentuhan editorial agar koleksi terasa hidup dan
@@ -287,8 +287,8 @@
                                             @else
                                                 <a href="{{ route('student.books.show', $book) }}"
                                                     class="inline-flex items-center justify-center gap-2 rounded-full bg-[#0f766e] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-[#115e59]">
-                                                    <span class="material-symbols-rounded text-base">login</span>
-                                                    Pinjam
+                                                    <span class="material-symbols-rounded text-base">book</span>
+                                                    Baca Buku
                                                 </a>
                                             @endauth
                                         </div>
@@ -362,7 +362,7 @@
                     <div>
                         <h2 class="text-3xl font-semibold text-[#172a37]"
                             style="font-family: 'Space Grotesk', sans-serif;">Koleksi terbaru yang siap dipinjam</h2>
-                        <p class="mt-2 text-sm text-[#4c5b54]">Katalog publik Bibliotech menampilkan buku dengan
+                        <p class="mt-2 text-sm text-[#4c5b54]">Katalog publik BiblioCore menampilkan buku dengan
                             informasi stok dan kategori secara langsung.</p>
                     </div>
 
@@ -383,7 +383,7 @@
                             Transformasi ruang baca sekolah dimulai dari cara kita mempersembahkan koleksi.
                         </h2>
                         <p class="text-sm text-white/80">
-                            Bibliotech memadukan katalog, peminjaman, dan pengelolaan stok ke dalam satu pengalaman yang
+                            BiblioCore memadukan katalog, peminjaman, dan pengelolaan stok ke dalam satu pengalaman yang
                             konsisten tanpa meninggalkan kehangatan perpustakaan konvensional.
                         </p>
                     </div>
@@ -427,7 +427,7 @@
     <footer class="border-t border-[#e0d9c8] bg-white/80 py-6">
         <div
             class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-3 px-6 text-xs text-[#4c5b54] md:flex-row">
-            <p>&copy; {{ now()->year }} Bibliotech. Proyek Web Programming XI RPL 2025/2026.</p>
+            <p>&copy; {{ now()->year }} BiblioCore. Proyek Web Programming XI RPL 2025/2026.</p>
             <p class="flex items-center gap-2">
                 <span class="material-symbols-rounded text-sm text-[#0f766e]">code</span>
                 Laravel 12 • TailwindCSS • Breeze

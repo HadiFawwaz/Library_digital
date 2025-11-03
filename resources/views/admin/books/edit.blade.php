@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="pageDescription">
-        Perbarui informasi <span class="font-semibold">{{ $book->title }}</span> agar katalog Bibliotech selalu akurat.
+        Perbarui informasi <span class="font-semibold">{{ $book->title }}</span> agar katalog BiblioCore selalu akurat.
     </x-slot>
 
     <!-- FORM DIMULAI DI SINI -->

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>{{ $title ?? config('app.name', 'Bibliotech') }}</title>
+  <title>{{ $title ?? config('app.name', 'BiblioCore') }}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
               </span>
               <div>
                 <p class="text-lg font-semibold tracking-tight text-[#172a37]" style="font-family: 'Space Grotesk', sans-serif;">
-                  Bibliotech
+                  BiblioCore
                 </p>
                 <p class="text-xs uppercase tracking-[0.35em] text-[#5f6b63]">
                   School Library Console
@@ -128,7 +128,7 @@
 
     <footer class="border-t border-[#e0d9c8] bg-white/80 py-6">
       <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-3 px-6 text-xs text-[#4c5b54] md:flex-row">
-        <p>&copy; {{ now()->year }} Bibliotech.</p>
+        <p>&copy; {{ now()->year }} BiblioCore.</p>
         <p class="flex items-center gap-2">
           <span class="material-symbols-rounded text-sm text-[#0f766e]">code_blocks</span>
           Laravel 12 • TailwindCSS • Breeze

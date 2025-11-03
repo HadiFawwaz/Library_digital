@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\BookController as AdminBookController;
 use App\Http\Controllers\Admin\BorrowingController as AdminBorrowingController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\BookCommentController;
+use App\Http\Controllers\BookFeedbackController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Student\BookController as StudentBookController;
@@ -24,6 +26,13 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
     Route::get('borrowings', [AdminBorrowingController::class, 'index'])->name('borrowings.index');
     Route::patch('borrowings/{borrowing}', [AdminBorrowingController::class, 'update'])->name('borrowings.update');
 });
+
+Route::post('/books/{book}/like', [BookFeedbackController::class, 'store'])->name('books.like');
+
+Route::post('/books/{book}/comment', [BookCommentController::class, 'store'])->name('books.comment');
+Route::post('/comments/{comment}/like', [BookCommentController::class, 'toggleLike'])->name('comments.like');
+
+
 
 Route::middleware(['auth', 'role:student'])->prefix('student')->name('student.')->group(function () {
     Route::get('books', [StudentBookController::class, 'index'])->name('books.index');
