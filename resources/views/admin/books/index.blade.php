@@ -1,20 +1,20 @@
 <x-app-layout>
     <x-slot name="pageHeading">
-        Kelola Koleksi Buku
+        Kelola Koleksi Novel
     </x-slot>
 
     <x-slot name="pageDescription">
-        Tambah, perbarui, atau hapus informasi buku yang tersedia di perpustakaan.
+        Tambah, perbarui, atau hapus informasi novel yang tersedia di perpustakaan.
     </x-slot>
 
     <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-            <h2 class="text-lg font-semibold text-[#172a37]" style="font-family: 'Space Grotesk', sans-serif;">Daftar Buku</h2>
-            <p class="text-sm text-[#4c5b54]">Total {{ $books->total() }} buku terdaftar.</p>
+            <h2 class="text-lg font-semibold text-[#172a37]" style="font-family: 'Space Grotesk', sans-serif;">Daftar Novel</h2>
+            <p class="text-sm text-[#4c5b54]">Total {{ $books->total() }} novel terdaftar.</p>
         </div>
         <a href="{{ route('admin.books.create') }}" class="inline-flex items-center gap-2 rounded-full bg-[#0f766e] px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-[#115e59]">
             <span class="material-symbols-rounded text-base">add</span>
-            Tambah Buku Baru
+            Tambah Novel Baru
         </a>
     </div>
 
@@ -35,7 +35,7 @@
                 <thead class="bg-[#fff7ec]">
                     <tr>
                         <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.3em] text-[#6b766f]">No</th>
-                        <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.3em] text-[#6b766f]">Buku</th>
+                        <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.3em] text-[#6b766f]">Novel</th>
                         <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.3em] text-[#6b766f]">Kategori</th>
                         <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.3em] text-[#6b766f]">Gambar</th>
                         <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.3em] text-[#6b766f]">Deskripsi</th>

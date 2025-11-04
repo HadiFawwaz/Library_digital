@@ -40,7 +40,7 @@
                     </p>
                     <p
                         class="text-xs uppercase tracking-[0.35em] text-[#5f6b63] transition-colors duration-300 group-hover:text-[#f97316]">
-                        School Library
+                        School E-Library
                     </p>
                 </div>
 

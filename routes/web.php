@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\Admin\BookController as AdminBookController;
 use App\Http\Controllers\Admin\BorrowingController as AdminBorrowingController;
+use App\Http\Controllers\Admin\CommentController as AdminCommentController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\BookCommentController;
 use App\Http\Controllers\BookFeedbackController;
+use App\Http\Controllers\BookLikeController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Student\BookController as StudentBookController;
@@ -25,9 +27,10 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
     Route::resource('books', AdminBookController::class);
     Route::get('borrowings', [AdminBorrowingController::class, 'index'])->name('borrowings.index');
     Route::patch('borrowings/{borrowing}', [AdminBorrowingController::class, 'update'])->name('borrowings.update');
+    Route::resource('comments', AdminCommentController::class)->only(['index', 'destroy']);
 });
 
-Route::post('/books/{book}/like', [BookFeedbackController::class, 'store'])->name('books.like');
+Route::post('/books/{book}/like', [BookLikeController::class, 'store'])->name('books.like');
 
 Route::post('/books/{book}/comment', [BookCommentController::class, 'store'])->name('books.comment');
 Route::post('/comments/{comment}/like', [BookCommentController::class, 'toggleLike'])->name('comments.like');

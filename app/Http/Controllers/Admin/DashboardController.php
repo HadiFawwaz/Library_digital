@@ -4,26 +4,32 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Book;
-use App\Models\Borrowing;
 use App\Models\User;
-use Illuminate\View\View;
+use App\Models\Borrowing;
+use App\Models\BookComment;
 
 class DashboardController extends Controller
 {
-    /**
-     * Display an overview of the library statistics.
-     */
-    public function __invoke(): View
+    public function __invoke()
     {
-        return view('admin.dashboard', [
-            'totalBooks' => Book::count(),
-            'totalStudents' => User::where('role', 'student')->count(),
-            'processingBorrowings' => Borrowing::where('status', Borrowing::STATUS_PROCESSING)->count(),
-            'activeBorrowings' => Borrowing::where('status', Borrowing::STATUS_BORROWED)->count(),
-            'recentBorrowings' => Borrowing::with(['book', 'user'])
-                ->latest()
-                ->limit(5)
-                ->get(),
-        ]);
+        // Data lama: peminjaman terbaru
+        $recentBorrowings = Borrowing::with('book', 'user')
+            ->orderByDesc('created_at')
+            ->take(5)
+            ->get();
+
+        // Tambahin data komentar terbaru
+        $recentComments = BookComment::with(['user', 'book', 'likes'])
+            ->withCount('likes')
+            ->orderByDesc('created_at')
+            ->take(5)
+            ->get();
+
+        return view('admin.dashboard', compact('recentBorrowings', 'recentComments'));
+    }
+    
+    public function index()
+    {
+        return $this->__invoke();
     }
 }

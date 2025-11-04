@@ -53,7 +53,7 @@
                   BiblioCore
                 </p>
                 <p class="text-xs uppercase tracking-[0.35em] text-[#5f6b63]">
-                  School Library Console
+                  School E-Library Console
                 </p>
               </div>
             </a>

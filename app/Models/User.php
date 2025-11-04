@@ -6,6 +6,7 @@ namespace App\Models;
 use App\Models\Borrowing;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -72,5 +73,13 @@ class User extends Authenticatable
     public function borrowings(): HasMany
     {
         return $this->hasMany(Borrowing::class);
+    }
+
+    /**
+     * Books liked by the user.
+     */
+    public function likedBooks(): BelongsToMany
+    {
+        return $this->belongsToMany(Book::class, 'user_book_likes', 'user_id', 'book_id');
     }
 }

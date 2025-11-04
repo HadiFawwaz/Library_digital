@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\BookFeedback;
+use Illuminate\Support\Facades\Auth;
 
 class BookFeedbackController extends Controller
 {
@@ -16,6 +17,7 @@ class BookFeedbackController extends Controller
 
         BookFeedback::create([
             'book_id' => $book->id,
+            'user_id' => Auth::id(),
             'liked' => true,
             'feedback' => $request->feedback,
         ]);

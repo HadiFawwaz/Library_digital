@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Book extends Model
 {
@@ -37,6 +38,14 @@ class Book extends Model
 {
     return $this->hasMany(BookComment::class)->latest(); // supaya komentar terbaru muncul di atas
 }
+
+    /**
+     * Users who liked this book.
+     */
+    public function likedBy(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'user_book_likes', 'book_id', 'user_id');
+    }
 
     /**
      * Use the slug column for route model binding.
