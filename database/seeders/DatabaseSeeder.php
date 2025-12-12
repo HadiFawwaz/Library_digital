@@ -17,10 +17,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory()->admin()->create([
-            'name' => 'BiblioCore',
-            'username' => 'admin',
-            'email' => 'admin@BiblioCore.test',
-            'password' => Hash::make('password'),
+            'name' => 'kyoz',
+            'username' => 'adminkeren',
+            'email' => 'admin@BiblioCore.com',
+            'password' => Hash::make('password1'),
         ]);
 
         $this->call(BookSeeder::class);
